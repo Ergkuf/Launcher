@@ -50,14 +50,4 @@
         System.Diagnostics.Process.Start("http://demise-bc.enjin.com/forum")
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        MyBase.WindowState = FormWindowState.Minimized
-        My.Computer.Audio.Stop()
-        Dim Write As New System.IO.StreamWriter(CurDir() & "\Data\enUS\realmlist.wtf")
-        Write.Write("set realmlist logon.omegawow.eu")
-        Write.Close()
-        Dim AppPath = (CurDir() & "\WoW.exe")
-        Shell(AppPath, vbMinimizedFocus)
-        MyBase.WindowState = FormWindowState.Minimized
-    End Sub
 End Class
